@@ -37,5 +37,21 @@ public class Homework {
         double weight = bananas * 5 + milk * 200 + iceCream * 2 + egg * 4;
         System.out.println("Вес завтрака составляет " + weight + " грамм"); // не смог форматировать вывод в целое число
         System.out.println("вес завтрака составляет " + weight / 1000 + " килограмм");
+
+        // Задание 4
+
+        short weight1 = 7;
+        short weight2 = 7 * 1000;
+        short weightLoss1 = 250;
+        short weightLoss2 = 500;
+        int total1 = weight2 / weightLoss1;
+        int total2 = weight2 / weightLoss2;
+        System.out.println("При первом варианте потребуется " + total1 + " дней");
+        System.out.println("При втором варианте потребуется " + total2 + " дней");
+        System.out.println("В среднем потребуется " + (total1 + total2) / 2 + " дней");
+        /*
+        * Есть ощущение, что что-то сделал не так.... )
+        * непонятно в задании про "верное определение остатка".
+         */
     }
 }
