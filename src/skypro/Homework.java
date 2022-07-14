@@ -53,5 +53,25 @@ public class Homework {
         * Есть ощущение, что что-то сделал не так.... )
         * непонятно в задании про "верное определение остатка"
          */
+
+        // Задание 5
+
+        double mashaBefore = 67_760;
+        double denisBefore = 83_690;
+        double kristinaBefore = 76_230;
+        double mashaAfter = mashaBefore + (mashaBefore / 100 * 10);
+        double denisAfter = denisBefore + (denisBefore / 100 * 10);
+        double kristinaAfter = kristinaBefore + (kristinaBefore / 100 * 10);
+        double mashaDiff = mashaAfter - mashaBefore;
+        double denisDiff = denisAfter - denisBefore;
+        double kristinaDiff = kristinaAfter - kristinaBefore;
+        System.out.println("Маша теперь получает " + mashaAfter + " рублей. " + "Годовой доход вырос на " + mashaDiff + " рублей.");
+        System.out.println("Денис теперь получает " + denisAfter + " рублей. " + "Годовой доход вырос на " + denisDiff + " рублей.");
+        System.out.println("Кристина теперь получает " + kristinaAfter + " рублей. " + "Годовой доход вырос на " + kristinaDiff + " рублей.");
+        /*
+        * Видимо опять что-то делаю не так, т.к. в условиях сказано
+        * "операция сложения и операция умножения", а в итоге сделано по-другому...
+        * и опять, не понимаю как форматировать вывод целого числа...
+         */
     }
 }
