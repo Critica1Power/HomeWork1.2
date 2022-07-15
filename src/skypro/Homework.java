@@ -7,7 +7,7 @@ public class Homework {
         byte cherry = 120;
         short apples = 25321;
         int kiwi = 158769;
-        long skateBoard = 3698521L;
+        long skateBoard = 3698521;
         float salt = 15.850f;
         double sugar = 189.9991;
         char symbol = 21;
@@ -19,59 +19,68 @@ public class Homework {
         float weightSecondBoxer = 82.7f;
         float totalWeight = weightFirstBoxer + weightSecondBoxer;
         System.out.println("Общий вес бойцов " + totalWeight + "кг");
-        float differenceBetween = weightSecondBoxer - weightFirstBoxer;
-        /*
-        *Пытался пойти сложным путем как в обучающем ролике
-        *вес первого бойца минус второго, потом через переменную overload,
-        *но что-то пошло не так. Скорее всего, здесь это нельзя применить т.к.
-        *нет дополнительных условий.
-         */
+        float differenceBetween = Math.abs(weightFirstBoxer - weightSecondBoxer);
         System.out.println("Разница в весе между бойцами " + differenceBetween + "кг");
 
         // Задание 3
 
-        short bananas = 80;
-        double milk = 1.05;
-        short iceCream = 100;
-        short egg = 70;
-        double weight = bananas * 5 + milk * 200 + iceCream * 2 + egg * 4;
-        System.out.println("Вес завтрака составляет " + weight + " грамм"); // не смог форматировать вывод в целое число
-        System.out.println("вес завтрака составляет " + weight / 1000 + " килограмм");
+        int banana = 5;
+        int bananaWeight = 80;
+
+        int milk = 200/100;
+        int milkWeight = 105;
+
+        int iceCream = 2;
+        int iceCreamWeight = 100;
+
+        int egg = 4;
+        int eggWeight = 70;
+
+        int total = (banana * bananaWeight) + (milk * milkWeight) + (iceCream * iceCreamWeight) + (egg * eggWeight);
+        int gramsInKgs = 1000;
+        double totalKgs = total / (gramsInKgs * 1.0);
+        System.out.println("Вес завтрака составляет " + total + " грамм");
+        System.out.println("вес завтрака составляет " + totalKgs + " килограмм");
 
         // Задание 4
 
-        short weight1 = 7;
-        short weight2 = 7 * 1000;
-        short weightLoss1 = 250;
-        short weightLoss2 = 500;
-        int total1 = weight2 / weightLoss1;
-        int total2 = weight2 / weightLoss2;
-        System.out.println("При первом варианте потребуется " + total1 + " дней");
-        System.out.println("При втором варианте потребуется " + total2 + " дней");
-        System.out.println("В среднем потребуется " + (total1 + total2) / 2 + " дней");
-        /*
-        * Есть ощущение, что что-то сделал не так.... )
-        * непонятно в задании про "верное определение остатка"
-         */
+        int weight = 7;
+        int gramsInKg = 1000;
+        int weightInGrams = weight * gramsInKg;
+
+        int minGramsPerDay = 250;
+        int maxGramsPerDay = 500;
+
+        int minDays = weightInGrams / maxGramsPerDay;
+        int maxDays = weightInGrams / minGramsPerDay;
+
+        int diffDays = (minDays + maxDays) / 2;
+
+        System.out.println("При первом варианте потребуется " + minDays + " дней");
+        System.out.println("При втором варианте потребуется " + maxDays + " дней");
+        System.out.println("В среднем потребуется " + diffDays + " дней");
+
 
         // Задание 5
 
-        double mashaBefore = 67_760;
-        double denisBefore = 83_690;
-        double kristinaBefore = 76_230;
-        double mashaAfter = mashaBefore + (mashaBefore / 100 * 10);
-        double denisAfter = denisBefore + (denisBefore / 100 * 10);
-        double kristinaAfter = kristinaBefore + (kristinaBefore / 100 * 10);
-        double mashaDiff = mashaAfter - mashaBefore;
-        double denisDiff = denisAfter - denisBefore;
-        double kristinaDiff = kristinaAfter - kristinaBefore;
+        int percent = 10;
+        double multiplier = percent / (100 * 1.0);
+
+        int mashaBefore = 67760;
+        int denisBefore = 83_690;
+        int kristinaBefore = 76_230;
+
+        int mashaAfter = (int) (mashaBefore + (mashaBefore * multiplier));
+        int denisAfter = (int) (denisBefore + (denisBefore * multiplier));
+        int kristinaAfter = (int) (kristinaBefore + (kristinaBefore * multiplier));
+
+        int mashaDiff = (mashaAfter - mashaBefore) * 12;
+        int denisDiff = (denisAfter - denisBefore) * 12;
+        int kristinaDiff = (kristinaAfter - kristinaBefore) * 12;
+
         System.out.println("Маша теперь получает " + mashaAfter + " рублей. " + "Годовой доход вырос на " + mashaDiff + " рублей.");
         System.out.println("Денис теперь получает " + denisAfter + " рублей. " + "Годовой доход вырос на " + denisDiff + " рублей.");
         System.out.println("Кристина теперь получает " + kristinaAfter + " рублей. " + "Годовой доход вырос на " + kristinaDiff + " рублей.");
-        /*
-        * Видимо опять что-то делаю не так, т.к. в условиях сказано
-        * "операция сложения и операция умножения", а в итоге сделано по-другому...
-        * и опять, не понимаю как форматировать вывод целого числа...
-         */
+
     }
 }
